@@ -1,0 +1,40 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.6.20'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+    id 'application'
+}
+
+group 'com.ejrp'
+version '1.0-SNAPSHOT'
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "11"
+}
+
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "11"
+}
+
+javafx {
+    mainClassName = 'com.ejrp.games.RunApp'
+    version = "18.0.1"
+    modules = ['javafx.controls']
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    // Align versions of all Kotlin components
+    implementation platform('org.jetbrains.kotlin:kotlin-bom')
+
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+    // Use the tornadofx
+    implementation "no.tornado:tornadofx:1.7.20"
+
+    implementation 'org.openjfx:javafx-controls:18.0.1'
+
+    implementation 'com.ejrp.chess:ChessEngine:1.0'
+}
