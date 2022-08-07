@@ -8,15 +8,15 @@ group 'com.ejrp'
 version '1.0-SNAPSHOT'
 
 compileKotlin {
-    kotlinOptions.jvmTarget = "11"
+    kotlinOptions.jvmTarget = "18"
 }
 
 compileTestKotlin {
-    kotlinOptions.jvmTarget = "11"
+    kotlinOptions.jvmTarget = "18"
 }
 
 javafx {
-    mainClassName = 'com.ejrp.games.RunApp'
+    mainClassName = 'com.ejrp.games.Launcher'
     version = "18.0.1"
     modules = ['javafx.controls']
 }
@@ -34,7 +34,9 @@ dependencies {
     // Use the tornadofx
     implementation "no.tornado:tornadofx:1.7.20"
 
-    implementation 'org.openjfx:javafx-controls:18.0.1'
+    implementation 'org.openjfx:javafx-controls:18.0.2'
 
     implementation 'com.ejrp.chess:ChessEngine:1.0'
+
+    implementation 'org.slf4j:slf4j-simple:1.7.36'
 }

@@ -1,4 +1,4 @@
-package com.ejrp.games.chess
+package com.ejrp.games
 
 import com.ejrp.chess.board.*
 import com.ejrp.chess.piece.*
